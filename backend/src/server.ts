@@ -33,9 +33,9 @@ app.use("/api/tasks", taskRoutes);
 app.use("/auth", userRoutes);
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(join(__dirname, "../frontend/dist")));
+  app.use(express.static(join(__dirname, "../../frontend/dist")));
   app.get(/.*/, (_req, res) => {
-    res.sendFile(join(__dirname, "../frontend/dist/index.html"));
+    res.sendFile(join(__dirname, "../../frontend/dist/index.html"));
   });
 }
 
