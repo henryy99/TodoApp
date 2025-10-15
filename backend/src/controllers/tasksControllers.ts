@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import Task from "../models/Task.ts";
+import Task from "../models/Task.js";
 
 export const getAllTasks = async (req: Request, res: Response) => {
   const { filter = "today", id } = req.query;
