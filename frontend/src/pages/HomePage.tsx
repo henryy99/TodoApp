@@ -34,7 +34,7 @@ const HomePage = () => {
       setCompletedCount(res.data.completedCount);
     } catch (error) {
       console.error("Error fetching tasks:", error);
-      toast.error("Failed to fetch tasks");
+      toast.error("Failed to fetch task");
     }
   }, [dateQuery, userId]); // ✅ include dependencies here
 
