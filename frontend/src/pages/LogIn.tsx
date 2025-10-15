@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const LogIn = () => {
   const handleGoogleSignIn = () => {
     console.log("Redirecting...");
-    window.location.href = "http://localhost:5001/auth/google";
+    window.location.href = `${import.meta.env.VITE_API_URL}/auth/google`;
   };
   return (
     <div
