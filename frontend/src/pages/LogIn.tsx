@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const LogIn = () => {
   const handleGoogleSignIn = () => {
     console.log("Redirecting...");
-    window.location.href = `${import.meta.env.VITE_API_URL}/auth/google`;
+    window.location.href = `https://todoapp-lmo3.onrender.com/auth/google`;
   };
   return (
     <div
