@@ -82,7 +82,9 @@ export function UserProvider({ children }: UserProps) {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await axios.get("http://localhost:5001/auth/user");
+        const res = await axios.get(
+          "https://todoapp-lmo3.onrender.com/auth/user"
+        );
 
         if (res.data.success) {
           const user = res.data.user;
@@ -100,7 +102,7 @@ export function UserProvider({ children }: UserProps) {
   // --- Logout function ---
   const logout = async () => {
     try {
-      await axios.post("http://localhost:5001/auth/logout");
+      await axios.post("https://todoapp-lmo3.onrender.com/auth/logout");
     } catch (err) {
       console.error("Logout error:", err);
     } finally {
